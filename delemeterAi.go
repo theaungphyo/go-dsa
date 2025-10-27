@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("abc[]{}", DelimeterMatch("abc[]{}"))  // ✅ true
-	fmt.Println("abc[}", DelimeterMatch("abc[}"))      // ❌ false
-	fmt.Println("abc{[}]}", DelimeterMatch("abc{[}]}")) // ❌ false
-	fmt.Println("abc", DelimeterMatch("abc"))           // ✅ true
+	fmt.Println("abc[]{}", DelimeterMatchAi("abc[]{}"))   // ✅ true
+	fmt.Println("abc[}", DelimeterMatchAi("abc[}"))       // ❌ false
+	fmt.Println("abc{[}]}", DelimeterMatchAi("abc{[}]}")) // ❌ false
+	fmt.Println("abc", DelimeterMatchAi("abc"))           // ✅ true
 }
 
-func DelimeterMatch(str string) bool {
+func DelimeterMatchAi(str string) bool {
 	pairs := map[byte]byte{
 		']': '[',
 		'}': '{',
