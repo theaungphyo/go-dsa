@@ -5,10 +5,10 @@ import (
 )
 
 func main() {
-	fmt.Println("abc[", DelimeterMatch("abc[]}"))
+	fmt.Println("abc[", DelimiterMatch("abc[]}"))
 }
 
-func DelimeterMatch(str string) bool {
+func DelimiterMatch(str string) bool {
 	var stack []byte
 	for i := 0; i < len(str); i++ {
 		if str[i] == '[' {
